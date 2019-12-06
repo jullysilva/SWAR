@@ -68,3 +68,22 @@ h6{
   color: white;
   font-size: 18px;
 }
+
+.nav-item{
+  background-color: #2F2E36;
+  font-size: 20px;
+}
+
+.nav-link{
+  color: white;
+}
+
+.nav-link:focus{
+  background-color: #27a746;
+  color: #2F2E36;;
+}
+
+.nav-link:hover{
+  background-color: #27a746;
+  color: #2F2E36;
+}

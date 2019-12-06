@@ -1,4 +1,4 @@
-import React, { Components } from 'react';
+import React, {} from 'react';
 import { Nav, Media } from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 import logo from '../img/web_access.png';
@@ -19,14 +19,14 @@ function Menu() {
                 </Nav>
             </header>
             <div>
-                <Nav variant="pills" className="justify-content-center">
-                    <Nav.Item>
-                        <Nav.Link><Link to="/">HOME</Link></Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link><Link to="/WCAG">WCAG</Link></Nav.Link>
-                    </Nav.Item>
-                </Nav>
+                <ul class="nav nav-pills justify-content-center" >
+                <li class="nav-item">
+                    <a class="nav-link" href="/">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/WCAG">WCAG</a>
+                </li>
+                </ul>
             </div>
         </div>
     );

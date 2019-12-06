@@ -9,24 +9,28 @@ export class Sobre extends Component {
             <div>
                 <Menu />
                 <div className="App-header">
-            <h1 className="titulo">Padrão WCAG 2.0</h1>
-
+            <h1 className="titulo">Padrão WCAG</h1>
             <section className="padrao"> 
                 <ul>
-                    <li>Colocar textos alternativos em conteúdo não-textual</li><br/>
+                    <section className="textinho"> 
+                        Para que seu site seja acessível de acordo com o padrão WCAG, certifique-se que suas páginas possuam os seguintes requisitos:<br/><br/>
+                    </section>
+                    <li>Textos alternativos em conteúdos não-textuais</li><br/>
                     <li>Alternativas para áudios e vídeos</li><br/>
-                    <li>Organizar o código com boa estrutura lógica</li><br/>
-                    <li>Não use cores muito parecidas e não reproduza mídia automaticamente</li><br/>
-                    <li>Deixar todo o conteúdo acessível para usuários que usam somente o teclado (tab)</li><br/>
-                    <li>Deixe o usuário ter controle sobre conteúdos que tenham tempo de aparição</li><br/>
+                    <li>Código organizado e com boa estrutura lógica</li><br/>
+                    <li>Sem o uso de cores muito parecidas e nem reprodução automática de mídia</li><br/>
+                    <li>Conteúdo acessível para usuários que usam somente o teclado (tab)</li><br/>
+                    <li>Controle total do usuário sobre conteúdos que tenham tempo de aparição</li><br/>
                     <li>Nenhum conteúdo deve piscar mais de três vezes por segundo</li><br/>
-                    <li>Criar mecanismos de navegação úteis e claros ('Skip to Content', 'Click Here')</li><br/>
-                    <li>Colocar o idioma na página</li><br/>
-                    <li>Mostrar de forma clara aonde o usuário se encontra na navegação</li><br/>
-                    <li>Fornecer intruções claras ao usuário</li><br/>
-                    <li>Por fim, use todas as boas práticas de programação para criar um código acessível</li><br/>
+                    <li>Mecanismos de navegação úteis e claros</li><br/>
+                    <li>Idioma declarado no código da página</li><br/>
+                    <li>Exibição clara de onde o usuário se encontra na navegação</li><br/>
+                    <li>Intruções claras ao usuário</li><br/>
+                    <section className="textinho"> 
+                        Por fim, utilize todas as boas práticas de programação para criar uma página acessível a todos os usuários
+                    </section>
                 </ul>
-            </section>   
+            </section>  
             </div>
 
             <Footer />
