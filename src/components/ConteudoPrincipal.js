@@ -168,7 +168,7 @@ export class ConteudoPrincipal extends Component {
                 </div>
                 <div className="container">
                         <div className="box">
-                            <h2>Seja bem-vindo ao SWAR!</h2>
+                            <h2>Seja bem-vindo ao SWAR!</h2><br/>
                             O SWAR (Smart Web Accessibility Renderizer) é uma ferramenta que auxilia o desenvolvedor web no momento de tornar o seu site mais acessível.<br/>
                             Para usar o SWAR é muito simples! Basta selecionar o seu arquivo (ou arrastá-lo para a área em branco) e clicar no botão "Analisar o arquivo".<br/>
                             Então, será exibido na tela os resultados encontrados com a análise.<br/><br/>
