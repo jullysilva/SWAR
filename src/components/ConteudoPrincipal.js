@@ -116,6 +116,18 @@ export class ConteudoPrincipal extends Component {
     render() {
         return (
             <div>
+                <div className="container">
+                        <div className="box">
+                            <h2>Seja bem-vindo ao SWAR!</h2>
+                            <br/>
+                            O SWAR (Smart Web Accessibility Renderizer) é uma ferramenta que auxilia o desenvolvedor web no momento de tornar o seu site mais acessível.
+                            <br/>
+                            Para usar o SWAR é muito simples! Basta selecionar o seu arquivo (ou arrastá-lo para a área em branco) e clicar no botão "Analisar o arquivo".
+                            <br/>
+                            Então, será exibido na tela os resultados encontrados com a análise.
+                        </div>
+                </div>
+
                 <Form onSubmit={this.onSubmit}>
                     <Form.Group controlId="formBasicEmail">
                         <h3>Insira o arquivo HTML</h3>
@@ -124,18 +136,7 @@ export class ConteudoPrincipal extends Component {
                     <Button variant="success" type="submit" size="lg" onClick={() => this.analisarArquivo()}>
                         Analisar o arquivo
                     </Button>
-                    </Form>
-                    <div className="container">
-                        <div className="box">
-                            Seja bem-vindo ao SWAR!
-                            <br/>
-                            O SWAR (Smart Web Accessibility Renderizer) é uma ferramenta que auxilia o desenvolvedor web no momento de tornar o seu site mais acessível.
-                            <br/>
-                            Para usar o SWAR é muito simples! Basta selecionar o seu arquivo (ou arrastá-lo para a área em branco) e clicar no botão "Analisar o arquivo".
-                            <br/>
-                            Então, será exibido na tela os resultados encontrados com a análise.
-                        </div>
-                    </div>
+                </Form>  
             </div>
         )
     }
