@@ -11,8 +11,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 ReactDOM.render(
     <BrowserRouter>
         <Switch>
-            <Route exact={true} path="/" component={App} />
-            <Route exact={true} path="/sobre" component={Sobre} />
+            <Route path="/" exact={true} component={App}/>
+            <Route path="/Sobre" component={Sobre}/>
         </Switch>
     </BrowserRouter>,
     document.getElementById('root'));
