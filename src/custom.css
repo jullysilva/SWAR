@@ -1,10 +1,28 @@
 
 input[type = 'file']{
-    padding: 2% 0%;
+    padding: 2% 4%;
     color: #000;
     background-color: white;
     border: none;
     font-size: larger;
     border-radius: 3% 3%;
     align-content: center;
+}
+
+.padrao{
+    width: 70%;
+    height: 50%;
+    display: block;
+    border-radius: 1%;
+    background-color: white !important;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 2%;
+    padding: 5%;
+    font-size: 30px;
+}
+
+.titulo{
+    color: white;
+    font-size: 50px;
 }

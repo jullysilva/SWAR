@@ -19,12 +19,12 @@ function Menu() {
                 </Nav>
             </header>
             <div>
-                <Nav variant="pills" className="justify-content-center" defaultActiveKey="/home">
+                <Nav variant="pills" className="justify-content-center">
                     <Nav.Item>
                         <Nav.Link><Link to="/">HOME</Link></Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link eventKey="link-1"><Link to="/Sobre">WCAG</Link></Nav.Link>
+                        <Nav.Link><Link to="/WCAG">WCAG</Link></Nav.Link>
                     </Nav.Item>
                 </Nav>
             </div>

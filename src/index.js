@@ -2,17 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Sobre from './components/Sobre'
+import Sobre from './components/sobre'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-//ReactDOM.render(<App />, document.getElementById('root'));
 ReactDOM.render(
     <BrowserRouter>
         <Switch>
             <Route path="/" exact={true} component={App}/>
-            <Route path="/Sobre" component={Sobre}/>
+            <Route path="/WCAG" component={Sobre}/>
         </Switch>
     </BrowserRouter>,
     document.getElementById('root'));
