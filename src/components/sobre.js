@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Menu from './Menu'
 
-export class sobre extends Component {
+export class Sobre extends Component {
     render() {
         return (
             <div>
@@ -29,5 +29,5 @@ export class sobre extends Component {
     }
 }
 
-export default sobre
+export default Sobre
 
