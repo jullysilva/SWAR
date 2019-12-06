@@ -19,19 +19,40 @@ export class ConteudoPrincipal extends Component {
         let str = localStorage.getItem('texto');
         let linhas = str.split("\n");
 
+        if (linhas[(linhas.length-1)].includes('</html>')) {
+            alert('O arquivo foi reconhecido como HTML.');
+            this.analisarHTML(linhas);
+        }
+        else {
+            alert('O arquivo foi reconhecido como CSS.');
+            this.analisarCSS(linhas);
+        }
+    }
+
+    analisarHTML=(linhas) => {
         alert('Primeiro, vamos verificar a presença de imagens sem descrição alternativa.')
         this.verificarImagens(linhas) // verifica imagens
 
         alert('Agora, vamos verificar se os links da página possuem descrições claras.')
         this.verificarLinks(linhas) // verifica links
 
-        alert('Em seguida, vamos verificar se o código possui a descrição do idioma da página.')
+        alert('Por fim, vamos verificar se o código possui a descrição do idioma da página.')
         this.verificarLang(linhas) // verifica lang
 
-        //this.verificarTamanhoLetra(linhas) // verifica tamanho da letra
+        alert('FIM!')
     }
 
-    verificarImagens= (linhas) =>{
+    analisarCSS=(linhas) => {
+        alert('Primeiro, vamos verificar se a página possui algum texto com tamanho de fonte menor que 18.')
+        this.verificarTamanhoLetra(linhas) // verifica tamanho da letra
+
+        alert('Por fim, vamos verificar se a página mostra com clareza aonde o usuário se encontra na navegação por tab.')
+        this.verificarFocus(linhas) // verifica focus
+
+        alert('FIM!')
+    }
+
+    verificarImagens=(linhas) => {
         let cont = 0;
 
         for (let i = 0; i < linhas.length; i++) {
@@ -51,7 +72,7 @@ export class ConteudoPrincipal extends Component {
         }
     } // fim do verificarImagens
 
-    verificarLinks= (linhas) =>{
+    verificarLinks=(linhas) => {
         let cont = 0;
         
         for (let i = 0; i < linhas.length; i++) {
@@ -71,7 +92,7 @@ export class ConteudoPrincipal extends Component {
         }
     } // fim do verificarLinks
 
-    verificarLang= (linhas) =>{
+    verificarLang=(linhas) => {
         let possuiLang = false;
 
         let i = 0;
@@ -87,7 +108,7 @@ export class ConteudoPrincipal extends Component {
             alert('Atenção! Não detectamos a presença de uma descrição do idioma da página no seu código.');
     } // fim do verificarLang
 
-    verificarTamanhoLetra= (linhas) =>{
+    verificarTamanhoLetra=(linhas) => {
         let cont = 0;
         let tamanho;
 
@@ -112,19 +133,42 @@ export class ConteudoPrincipal extends Component {
                 alert('Foram encontrados ' + cont + ' textos com tamanho de fonte menor que 18.');
         }
     } // fim do verificarTamanhoLetra
-      
+
+    verificarFocus=(linhas) => {
+        let possuiFocus = false;
+
+        let i = 0;
+        while ( (!possuiFocus) && (i < linhas.length) ) {
+            if ( (linhas[i].includes(':focus')) )
+                possuiFocus = true;
+            i++;
+        }
+
+        if (possuiFocus)
+            alert('Parabéns! Sua página orienta o usuário com clareza na navegação por tab.');
+        else
+            alert('Atenção! Não detectamos uma orientação clara de onde o usuário se encontra na página.');
+    } // fim do verificarFocus
+
+
+
     render() {
         return (
             <div>
                 <div className="container">
                         <div className="box">
                             <h2>Seja bem-vindo ao SWAR!</h2>
-                            <br/>
-                            O SWAR (Smart Web Accessibility Renderizer) é uma ferramenta que auxilia o desenvolvedor web no momento de tornar o seu site mais acessível.
-                            <br/>
-                            Para usar o SWAR é muito simples! Basta selecionar o seu arquivo (ou arrastá-lo para a área em branco) e clicar no botão "Analisar o arquivo".
-                            <br/>
-                            Então, será exibido na tela os resultados encontrados com a análise.
+                            O SWAR (Smart Web Accessibility Renderizer) é uma ferramenta que auxilia o desenvolvedor web no momento de tornar o seu site mais acessível.<br/>
+                            Para usar o SWAR é muito simples! Basta selecionar o seu arquivo (ou arrastá-lo para a área em branco) e clicar no botão "Analisar o arquivo".<br/>
+                            Então, será exibido na tela os resultados encontrados com a análise.<br/><br/>
+                            Atualmente, as extenções suportadas são:
+                            <br/><br/><h5>HTML</h5>
+                            - Verifica a presença de imagens sem descrição alternativa<br/>
+                            - Verifica se os links da página possuem descrições claras<br/>
+                            - Verifica se o código possui a descrição do idioma da página<br/>
+                            <br/><br/><h5>CSS</h5>
+                            - Verifica se a página possui algum texto com tamanho de fonte menor que 18<br/>
+                            - Verifica se a página mostra com clareza aonde o usuário se encontra na navegação por tab
                         </div>
                 </div>
 
