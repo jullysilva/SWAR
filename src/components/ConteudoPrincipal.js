@@ -2,30 +2,7 @@ import React, { Component } from 'react'
 import { Form, Button } from 'react-bootstrap';
 import './../custom.css';
 
-
 export class ConteudoPrincipal extends Component {
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            arquivo: ''
-        }
-    }
-
-    onChange(e) {
-        let files = e.target.files;
-        let reader = new FileReader();
-
-        reader.readAsDataURL(files[0]);
-
-        console.log(files.size);
-        localStorage.setItem('file', reader.readAsText);
-
-    }
-
-    onSubmit(e) {
-        e.preventDefault();
-    }
 
     showFile = async (e) => {
         e.preventDefault()
@@ -42,16 +19,16 @@ export class ConteudoPrincipal extends Component {
         let str = localStorage.getItem('texto');
         let linhas = str.split("\n");
 
-        // alert('Primeiro, vamos verificar a presença de imagens sem descrição alternativa.')
-        // this.verificarImagens(linhas) // verifica imagens
+        alert('Primeiro, vamos verificar a presença de imagens sem descrição alternativa.')
+        this.verificarImagens(linhas) // verifica imagens
 
-        // alert('Agora, vamos verificar se os links da página possuem descrições claras.')
-        // this.verificarLinks(linhas) // verifica links
+        alert('Agora, vamos verificar se os links da página possuem descrições claras.')
+        this.verificarLinks(linhas) // verifica links
 
-        // alert('Em seguida, vamos verificar se o código possui a descrição do idioma da página.')
-        // this.verificarLang(linhas) // verifica lang
+        alert('Em seguida, vamos verificar se o código possui a descrição do idioma da página.')
+        this.verificarLang(linhas) // verifica lang
 
-        this.verificarTamanhoLetra(linhas) // verifica tamanho da letra
+        //this.verificarTamanhoLetra(linhas) // verifica tamanho da letra
     }
 
     verificarImagens= (linhas) =>{
@@ -150,7 +127,6 @@ export class ConteudoPrincipal extends Component {
                     </Form>
                     <div className="container">
                         <div className="box">
-                            <br/>
                             Seja bem-vindo ao SWAR!
                             <br/>
                             O SWAR (Smart Web Accessibility Renderizer) é uma ferramenta que auxilia o desenvolvedor web no momento de tornar o seu site mais acessível.

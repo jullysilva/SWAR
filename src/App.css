@@ -55,7 +55,7 @@ h6{
 }
 
 .container {
-  width: 25vw;
+  width: 50vw;
   height: 25vh;
   display: flex;
   flex-direction: row;
