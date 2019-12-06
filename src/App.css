@@ -59,11 +59,15 @@ h6{
   height: 25vh;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  text-justify: distribute;
   align-items: center
 }
 
 .box {
  color: white;
  font-size: 18px;
+}
+
+.content{
+  margin-top: 80px;
 }

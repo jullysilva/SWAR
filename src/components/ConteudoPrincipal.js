@@ -128,15 +128,17 @@ export class ConteudoPrincipal extends Component {
                         </div>
                 </div>
 
-                <Form onSubmit={this.onSubmit}>
-                    <Form.Group controlId="formBasicEmail">
-                        <h3>Insira o arquivo HTML</h3>
-                        <input type="file" id="input" size="lg" onChange={(e) => this.showFile(e)} />
-                    </Form.Group>
-                    <Button variant="success" type="submit" size="lg" onClick={() => this.analisarArquivo()}>
-                        Analisar o arquivo
-                    </Button>
-                </Form>  
+                <div className="content">
+                    <Form onSubmit={this.onSubmit}>
+                        <Form.Group controlId="formBasicEmail">
+                            <h3>Insira o arquivo HTML</h3>
+                            <input type="file" id="input" size="lg" onChange={(e) => this.showFile(e)} />
+                        </Form.Group>
+                        <Button variant="success" type="submit" size="lg" onClick={() => this.analisarArquivo()}>
+                            Analisar o arquivo
+                        </Button>
+                    </Form>
+                </div>  
             </div>
         )
     }
