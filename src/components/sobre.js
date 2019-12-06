@@ -22,7 +22,7 @@ export class Sobre extends Component {
     3.2 - Mostrar de forma clara aonde o usuário se encontra na navegação
     3.3 - Fornecer intruções claras ao usuário
     
-    4.1 - Por fim, use todas as boas práticas de programação para criar um código acessível
+    4.1 - Por fim, use todas as boas práticas de programação para criar um código acessível    
             </div>
             </div>
         )
