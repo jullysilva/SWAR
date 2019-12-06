@@ -155,6 +155,17 @@ export class ConteudoPrincipal extends Component {
     render() {
         return (
             <div>
+                <div className="content">
+                    <Form onSubmit={this.onSubmit}>
+                        <Form.Group controlId="formBasicEmail">
+                            <h3>Insira o arquivo HTML ou CSS</h3>
+                            <input type="file" id="input" size="lg" onChange={(e) => this.showFile(e)} />
+                        </Form.Group>
+                        <Button variant="success" type="submit" size="lg" onClick={() => this.analisarArquivo()}>
+                            Analisar o arquivo
+                        </Button>
+                    </Form>
+                </div>
                 <div className="container">
                         <div className="box">
                             <h2>Seja bem-vindo ao SWAR!</h2>
@@ -166,22 +177,10 @@ export class ConteudoPrincipal extends Component {
                             - Verifica a presença de imagens sem descrição alternativa<br/>
                             - Verifica se os links da página possuem descrições claras<br/>
                             - Verifica se o código possui a descrição do idioma da página<br/>
-                            <br/><br/><h5>CSS</h5>
+                            <br/><h5>CSS</h5>
                             - Verifica se a página possui algum texto com tamanho de fonte menor que 18<br/>
                             - Verifica se a página mostra com clareza aonde o usuário se encontra na navegação por tab
                         </div>
-                </div>
-
-                <div className="content">
-                    <Form onSubmit={this.onSubmit}>
-                        <Form.Group controlId="formBasicEmail">
-                            <h3>Insira o arquivo HTML</h3>
-                            <input type="file" id="input" size="lg" onChange={(e) => this.showFile(e)} />
-                        </Form.Group>
-                        <Button variant="success" type="submit" size="lg" onClick={() => this.analisarArquivo()}>
-                            Analisar o arquivo
-                        </Button>
-                    </Form>
                 </div>  
             </div>
         )
