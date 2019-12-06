@@ -1,0 +1,10 @@
+
+input[type = 'file']{
+    padding: 3% 8%;
+    color: #000;
+    background-color: white;
+    border: none;
+    font-size: larger;
+    border-radius: 3% 3%;
+    align-content: center;
+}
