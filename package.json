@@ -4,18 +4,18 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.3.1",
+    "express": "^4.18.1",
     "i": "^0.3.6",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0"
+    "react-scripts": "^5.0.1"
   },
   "scripts": {
-    "start": "react-scripts server.js",
-    "dev": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-scripts start",
+    "build": "run-script build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
