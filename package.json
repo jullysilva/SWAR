@@ -1,10 +1,12 @@
 {
   "name": "swar",
+  "homepage": "https://jullysilva.github.io/swar",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "bootstrap": "^4.3.1",
     "express": "^4.18.1",
+    "gh-pages": "^5.0.0",
     "i": "^0.3.6",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
@@ -15,6 +17,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "run-script build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -23,7 +27,7 @@
     "extends": "react-app"
   },
   "engines": {
-    "node": "14.17.4"
+    "node": "^18.16.0"
   },
   "browserslist": {
     "production": [
